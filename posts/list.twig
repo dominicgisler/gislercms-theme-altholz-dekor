@@ -1,0 +1,5 @@
+<div class="row">
+    {% for item in list %}
+        {% include 'posts/item.twig' with { pTrans: pTrans, post: item.post, trans: item.trans } %}
+    {% endfor %}
+</div>

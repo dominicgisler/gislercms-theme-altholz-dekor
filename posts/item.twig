@@ -1,0 +1,27 @@
+<div class="col-md-4">
+    <div class="card mb-4 shadow-sm">
+        <div class="card-img-top" style="background-image: url('{{ trans.getMetaImage() }}');"></div>
+        <div class="card-body">
+            <h3>{{ trans.getTitle() }}</h3>
+            <p class="card-text">
+                {% if trans.getMetaDescription()|length > 0 %}
+                    {{ trans.getMetaDescription()|nl2br }}
+                {% else %}
+                    {{ trans.getContent() }}
+                {% endif %}
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="{{ base_url() }}/{{ pTrans.getLanguage().getLocale() }}/{{ pTrans.getName() }}/{{ trans.getName() }}" class="btn btn-sm btn-outline-secondary">Ansehen</a>
+                </div>
+                <small class="text-muted font-weight-bold">
+                    {% for attribute in post.getAttributes() %}
+                        {% if attribute.getName() == 'preis' %}
+                            Fr. {{ attribute.getValue() }}
+                        {% endif %}
+                    {% endfor %}
+                </small>
+            </div>
+        </div>
+    </div>
+</div>

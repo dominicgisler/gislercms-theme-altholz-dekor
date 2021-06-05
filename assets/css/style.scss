@@ -5,26 +5,42 @@ $fa-font-path: "../webfonts" !default;
 @import '../../vendor/fortawesome/font-awesome/scss/solid';
 @import '../../vendor/fortawesome/font-awesome/scss/brands';
 
-body {
-  background: url('../img/bg.jpeg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.background-cover {
+.card-img-top {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 200px;
+  height: 250px;
 }
 
-.gallery-item {
-  height: 150px;
+main {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.jumbotron {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.contact ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.contact ul li a {
+  color: #FFFFFF;
 }
 
 #cookie-info {
   position: fixed;
   bottom: 0;
+  padding: 10px;
+}
+
+#articleGallery {
+  a.carousel-control-prev, a.carousel-control-next {
+    opacity: 0.8;
+    color: #dc3545;
+  }
 }

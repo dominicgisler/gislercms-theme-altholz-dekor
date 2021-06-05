@@ -1,3 +1,16 @@
-<main role="main" class="mt-2 border rounded bg-light p-4">
-    {{ page.getContent()|raw }}
+<main role="main" style="background-image: url('{{ page.getMetaImage() }}');">
+    <section class="jumbotron text-center mb-0">
+        <div class="container">
+            <h1 class="jumbotron-heading">{{ page.getTitle() }}</h1>
+            <p class="lead">{{ page.getMetaDescription()|nl2br }}</p>
+            <p>
+                <a href="{{ base_url() }}/kontakt" class="btn btn-primary my-2">Kontakt</a>
+            </p>
+        </div>
+    </section>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            {{ page.getContent()|raw }}
+        </div>
+    </div>
 </main>
